@@ -14,7 +14,7 @@ class Country:
   connection = None
 
   def __init__(self):
-    engine = sqlalchemy.create_engine(config.dsn)
+    engine = sqlalchemy.create_engine(config.dsn, pool_recycle=300)
     self.connection = engine.connect()
   
   def get_country(self, lat, lon):
