@@ -32,7 +32,10 @@ def get_country():
 
   lat = float(request.args['lat'])
   lon = float(request.args['lon'])
-  return country_data.get_country(lat, lon)
+  country = country_data.get_country(lat, lon)
+  if not country:
+    return '', 200
+  return country
 
 @app.route('/api/getElevation', methods=['GET'])
 @cross_origin()
