@@ -1,2 +1,3 @@
 cache/*.png
 *.pyc
+config.py

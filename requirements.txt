@@ -5,3 +5,5 @@ requests>=2.5.1
 werkzeug>=0.10.4
 pypng>=0.0.18
 shapely>=1.5.9
+mysql-python>=1.2.5
+sqlalchemy>=1.1.10

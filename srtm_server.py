@@ -9,10 +9,10 @@ import logging
 import png
 import os.path
 from itertools import product, starmap, islice
-from country_poligons import CountryPoligons
+from country import Country
 
 elevation_data = srtm.get_data()
-country_data = CountryPoligons()
+country_data = Country()
 app = Flask(__name__, static_folder='static', static_url_path='')
 
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
