@@ -15,6 +15,7 @@ connection = engine.connect()
 class Country:
 
   def get_country(self, lat, lon):
+    connection = engine.connect()
     try:
       connection.execute("SELECT 1")
     except:
@@ -27,4 +28,7 @@ class Country:
       )
 
     for row in result:
-      return row['iso_2']
+      country = row['iso_2']
+      connection.close()
+      break
+    return country
