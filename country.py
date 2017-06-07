@@ -27,6 +27,7 @@ class Country:
       WHERE ST_Contains(boundaries.shape, GeomFromText('POINT(%f %f)'))""" % (lon, lat)
       )
 
+    country = ''
     for row in result:
       country = row['iso_2']
       connection.close()
